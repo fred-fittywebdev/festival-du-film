@@ -1,0 +1,654 @@
+/* google fonts
+nunito: font-family: 'Nunito', sans-serif;
+Dancing script: font-family: 'Dancing Script', cursive;
+
+http://via.placeholder.com/800x500
+*/
+
+/* =============== général =============== */
+body  {
+    font-family: 'Nunito', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+}
+
+.btn {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.common-title {
+    display: inline-block;
+    /* pour que le hover ne prenne pas toute la largeur, un h1 est en display block habituellement*/
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 5px #aaa;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    margin-top: 2rem;
+}
+
+.common-title::first-letter {
+    font-size: 5rem;
+}
+
+.common-title:hover {
+    -webkit-transform: translate(-5px, -3px);
+    transform: translate(-5px, -3px);
+    text-shadow: 2px 5px 20px #aaa;
+}
+
+/* =============== navigation =============== */
+nav {
+    font-weight: 100;
+    position: absolute !important;
+    background: rgba(68, 100, 85, 0.671);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3; 
+}
+
+.nav-item {
+    font-size: 1.4rem;
+    list-style-type: none;
+}
+
+.nav-link {
+    color: #fdd262 !important;
+    font-weight: 300;
+}
+
+.nav-link:hover {
+    transition: border 0.2s;
+    border-bottom: 1px solid #fdd262;
+    -webkit-transition: border 0.2s;
+    -moz-transition: border 0.2s;
+    -ms-transition: border 0.2s;
+    -o-transition: border 0.2s;
+}
+
+.btn-admin {
+    color: #d3dddc;
+    font-size: .8rem;
+    padding-top: 13px;
+}
+.btn-admin:hover {
+    color: #fdd262;
+}
+
+
+
+
+/* =============== header =============== */
+header {
+    height: 70vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(68, 100, 85, 0.788)), to(rgba(68, 100, 85, 0.767))), url(../img/cinema.jpg);
+    background: linear-gradient(rgba(68, 100, 85, 0.788), rgba(68, 100, 85, 0.767)), url(../img/cinema.jpg);
+    /* raccourci  fixed center no-repeat /cover ne fonctionne pas sur firefox */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    position: relative;
+}
+
+.header-resa {
+    height: 50vh;
+}
+
+.btn-vert {
+    border-bottom-color: #fdd262;
+    border-bottom-width: .25rem;
+    background-color: rgba(68, 100, 85, 0.89);
+    color: #ffffff;
+}
+
+.btn-vert:hover {
+    color: #fdd262;
+}
+
+.btn-heading {
+    -webkit-animation: coeur 2s infinite;
+    animation: coeur 2s infinite;
+}
+
+.link-jaune {
+    color: #ffd262;
+}
+
+.banner-heading::first-letter {
+    font-size: 10rem;
+}
+
+
+@-webkit-keyframes coeur {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    40% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    60% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    80% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+
+@keyframes coeur {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+
+    40% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    60% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    80% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* =============== gallerie/slider =============== */
+
+.second-text {
+    font-size: 1.5rem;
+}
+
+/* =============== films =============== */
+hr {
+    background-color: #fdd262;
+    height: 0.02rem;
+    width: 14rem;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/* =============== films cards =============== */
+.card-date {
+    color: #446455;
+    font-weight: 700;
+}
+
+.btn-show {
+    outline: none !important;
+}
+.accordion-link {
+    display: inline-block;
+    width: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-header {
+    background: none;
+    border: none;
+}
+.card {
+    border: none;
+}
+#accordion {
+    text-align: center;
+}
+
+/* =============== contact =============== */
+.contacts {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(68, 100, 85, 0.788)), to(rgba(68, 100, 85, 0.767))), url(../img/cinema.jpg);
+    background: linear-gradient(rgba(68, 100, 85, 0.788), rgba(68, 100, 85, 0.767)), url(../img/cinema.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.floating-icones {
+    background: #d3dddc;
+    border-radius: 5px;
+}
+
+.first-item {
+    -webkit-animation: nuage 15s infinite;
+    animation: nuage 15s infinite;
+}
+
+.second-item {
+    -webkit-animation: nuage 20s ease-in infinite;
+    animation: nuage 20s ease-in infinite;
+}
+
+.third-item {
+    -webkit-animation: nuage 40s linear infinite;
+    animation: nuage 40s linear infinite;
+}
+
+.fourth-item {
+    -webkit-animation: nuage 30s infinite;
+    animation: nuage 30s infinite;
+}
+
+.fifth-item {
+    -webkit-animation: nuage 25s ease-in-out infinite;
+    animation: nuage 25s ease-in-out infinite;
+}
+
+.contact-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form input::-webkit-input-placeholder,
+.contact-form select {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #f3f5f6;
+}
+
+.contact-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input:-ms-input-placeholder,
+.contact-form select {
+    background: transparent;
+    box-shadow: none;
+    color: #f3f5f6;
+}
+
+.contact-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input::-ms-input-placeholder,
+.contact-form select {
+    background: transparent;
+    box-shadow: none;
+    color: #f3f5f6;
+}
+
+.contact-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input::-webkit-input-placeholder,
+.contact-form select {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #f3f5f6;
+}
+
+.contact-form input[type="password"],
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input::placeholder,
+.contact-form select {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #f3f5f6;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    background: #446455;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #f3f5f6;
+}
+
+@-webkit-keyframes nuage {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(-60px);
+        transform: translateX(-60px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+@keyframes nuage {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    50% {
+        -webkit-transform: translateX(-60px);
+        transform: translateX(-60px);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+.p-adresse {
+    color: #446455;
+}
+
+
+
+/* =============== section actualites =============== */
+.actu {
+    background-repeat: no-repeat;
+    min-height: 40rem;
+}
+
+@media (maw-width: 768px) {
+    .actu {
+        min-height: 30rem;
+    }
+}
+
+.basique {
+    background-image: url(../img/viggo1.jpg);
+    background-position: center right;
+}
+
+.second {
+    background-image: url(../img/actu2.jpg);
+    background-position: center left;
+}
+
+
+/* =============== page admin =============== */
+
+.form-admin input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px
+}
+
+.form-admin input[type="text"],
+.form-admin input[type="password"] {
+    border: 2px solid rgba(68, 100, 85, 0.788);
+    color: #d3dddc;
+}
+
+
+.form-admin input[type="submit"] {
+    background: rgba(68, 100, 85, 0.788);
+    color: #fdd262;
+    font-size: 1.2em;
+    border-bottom: 2px solid #fdd262;
+}
+
+.form-admin textarea {
+    height: 200px;
+    /* margin-bottom: 20px; */
+    border: none;
+    border-radius: 2px;
+    border: 2px solid rgba(68, 100, 85, 0.788);
+    /* padding: 20px; */
+    color: #d3dddc;
+    width: 100%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.footer-admin {
+    background: rgba(68, 100, 85, 0.788);
+    height: 100px;
+}
+.nav-link-footer:hover {
+    border-bottom: none;
+}
+
+/* =============== footer =============== */
+.footer-vert {
+    background-color: #446455;
+}
+.footer-liste{
+    padding: 0 !important;
+}
+.lien-f,
+.text-footer {
+    color: #fdd262;
+}
+
+.lien-f:hover {
+    text-decoration: none;
+    color: #fdd262;
+}
+.admin {
+        border-color: rgba(68, 100, 85, 0.89);
+        border-width: .25rem;
+        background-color: #fdd262;
+        color: #446455;
+        font-weight: 700;
+    
+}
+.admin:hover {
+    color: #446455;
+}
+
+
+
+
+/* =============== page actualités =============== */
+.img-auteur {
+    border-radius: 50%;
+}
+
+.bg-auteur {
+    background: #446455;
+    font-size: 1.2rem;
+}
+
+.lien-auteur {
+    color: #fdd262;
+    display: block;
+}
+
+.lien-auteur:hover {
+    color: #d3dddc;
+    text-decoration: none;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.quote-article {
+    color: #fdd262;
+}
+
+.quote-article-f {
+    color: #446455;
+}
+
+.recent {
+    margin-top: 50px !important;
+}
+
+.article-lien {
+    color: #446455;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.article-lien:hover {
+    text-decoration: none;
+    color: #fdd262;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.image-article {
+    width: 232px;
+    height: 150px;
+}
+
+
+/* =============== page films =============== */
+.icone-avis {
+    color: #446455;
+}
+
+.text-titre {
+    border-left: #fdd262 5px solid;
+    font-weight: 700;
+}
+
+.btn-resa {
+    padding: 8px 48px 8px 48px;
+}
+
+.p-fiche {
+    color: #446455;
+    font-weight: 500;
+}
+
+.fiche-film {
+    margin-bottom: 10rem !important;
+}
+
+/* =============== modal =============== */
+.modal-titre {
+    background: #fdd262;
+}
+
+.modal-title {
+    color: #446455;
+    font-weight: 600;
+}
+
+.alert {
+    display: none;
+}
+
+
+/* =============== media query pour les écrans en dessous de 1200px (lg) =============== */
+@media (min-width: 1199px) {
+    .menus-dates {
+        /* pour aligner avec le carousel plus haut. */
+        margin-left: -6px;
+        margin-right: -6px;
+    }
+}
+
+/* =============== media query pour les écrans en dessous de 992px (lg) =============== */
+@media (max-width: 991px) {
+    header h1 {
+        font-size: 5rem !important;
+    }
+    .banner-heading::first-letter {
+        font-size: 9rem !important;
+    }
+    .btn-resa {
+        font-size: 1rem;
+        padding: 5px 40px 5px 40px !important;
+    }
+}
+
+/* =============== media query pour les écrans en dessous de 768px (md) =============== */
+@media (max-width: 767px) {
+    nav {
+        background: rgba(68, 100, 85, 0.788);
+    }
+    .nav-link {
+        color: #d3dddc !important;
+        font-weight: 300;
+    }
+    .nav-link:hover{
+        border-bottom: none;
+        color: #fdd262 !important;
+    }
+    header h1 {
+        font-size: 4rem !important;
+    }
+    .banner-heading::first-letter {
+        font-size: 8rem !important;
+    }
+    .btn-resa {
+        font-size: .8rem;
+        padding: 4px 30px 4px 30px !important;
+    }
+    .btn-admin {
+        padding-left: 0;
+    }
+}
+
+/* =============== media query pour les écrans en dessous de 576px (sm) =============== */
+@media (max-width: 575px) {
+    header h1 {
+        font-size: 3rem !important;
+    }
+    .banner-heading::first-letter {
+        font-size: 6rem !important;
+    }
+    .btn-resa {
+        font-size: .8rem;
+        padding: 3px 20px 3px 20px !important;
+    }
+}
+
+/* =============== media query pour les écrans en dessous de 576px (sm) =============== */
+@media (max-width: 575px) {
+
+}
+
+
+
+/*============ BOOTSTRAP BREAK POINTS: on part ici de mobile first le choix par défaut de B4 donc min-width
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+=============*/
